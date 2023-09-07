@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "OREFA"
+  site-url: "https://florisabrams.github.io/OREFA"
+  description: "conda install -c fastai nbdev"
+  repo-branch: main
+  repo-url: "https://github.com/florisabrams/OREFA"
