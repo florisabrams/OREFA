@@ -29,19 +29,19 @@ class Parcel():
             import json
             from math import exp, log
 
-            with open(self.config['dir']+self.config["ModelInputs"]["CropGroupProperties"], 'r') as crop_group_to_properties:
+            with open(self.config['directory']['dir']+self.config["ModelInputs"]["CropGroupProperties"], 'r') as crop_group_to_properties:
                 dict_crop_group_to_properties = json.load(crop_group_to_properties)
-            with open(self.config['dir']+self.config["ModelInputs"]["SoilGroupProperties"], 'r') as soil_properties:
+            with open(self.config['directory']['dir']+self.config["ModelInputs"]["SoilGroupProperties"], 'r') as soil_properties:
                 dict_soil_to_properties = json.load(soil_properties)
-            with open(self.config['dir']+self.config["ModelInputs"]["RnProperties"], 'r') as RN_properties:
+            with open(self.config['directory']['dir']+self.config["ModelInputs"]["RnProperties"], 'r') as RN_properties:
                 dict_RN_properties = json.load(RN_properties)
-            with open(self.config['dir']+self.config["ModelInputs"]["TF"], 'r') as TF:
+            with open(self.config['directory']['dir']+self.config["ModelInputs"]["TF"], 'r') as TF:
                 TF_dict = json.load(TF)
-            with open(self.config['dir']+self.config["ModelInputs"]["CfilLevel"], 'r') as cfil:
+            with open(self.config['directory']['dir']+self.config["ModelInputs"]["CfilLevel"], 'r') as cfil:
                 intervention_levels = json.load(cfil)
-            with open(self.config['dir']+self.config["ModelInputs"]["AnimalFeedIntake"], 'r') as feed:
+            with open(self.config['directory']['dir']+self.config["ModelInputs"]["AnimalFeedIntake"], 'r') as feed:
                 animal_daily_feed_intake = json.load(feed)
-            with open(self.config['dir']+self.config["ModelInputs"]["AnimalDryWeight"], 'r') as dry:
+            with open(self.config['directory']['dir']+self.config["ModelInputs"]["AnimalDryWeight"], 'r') as dry:
                 dict_dry_weight_animal_feed = json.load(dry)
 
             root_zone_depth = float(dict_crop_group_to_properties.get(self.crop).get('root_depth'))
