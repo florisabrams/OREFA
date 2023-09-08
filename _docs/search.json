@@ -25,7 +25,7 @@
     "href": "parcel.html",
     "title": "Parcel",
     "section": "",
-    "text": "Parcel\n\n Parcel (id, crop, soil, deposition, geom, config=None)\n\nInitialize self. See help(type(self)) for accurate signature."
+    "text": "source\n\nParcel\n\n Parcel (id, crop, soil, deposition, geom, config=None)\n\nInitialize self. See help(type(self)) for accurate signature."
   },
   {
     "objectID": "aoi.html",
