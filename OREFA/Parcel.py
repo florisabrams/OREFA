@@ -31,6 +31,7 @@ class Parcel():
 
             with open(self.config['directory']['dir']+self.config["ModelInputs"]["CropGroupProperties"], 'r') as crop_group_to_properties:
                 dict_crop_group_to_properties = json.load(crop_group_to_properties)
+                print(dict_crop_group_to_properties)
             with open(self.config['directory']['dir']+self.config["ModelInputs"]["SoilGroupProperties"], 'r') as soil_properties:
                 dict_soil_to_properties = json.load(soil_properties)
             with open(self.config['directory']['dir']+self.config["ModelInputs"]["RnProperties"], 'r') as RN_properties:
