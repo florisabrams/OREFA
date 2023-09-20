@@ -136,3 +136,4 @@ websocket-client==1.6.3
 geopandas==0.14.0 
 fastai==2.7.12
 nbdev==2.3.12
+matplotlib==3.8.0
