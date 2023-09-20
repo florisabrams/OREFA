@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # Data folder
-Assets/Data
+./Data/
 
 # Distribution / packaging
 .Python
