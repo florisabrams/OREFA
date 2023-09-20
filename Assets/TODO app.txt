@@ -1,0 +1,20 @@
+
+GPS
+pip install plyer
+from plyer import gps
+def start_gps(self):
+        gps.configure(on_location=self.on_gps_location)
+        gps.start(minTime=1000, minDistance=0)
+        
+    def stop_gps(self):
+        gps.stop()
+        
+    def on_gps_location(self, **kwargs):
+        latitude = kwargs['lat']
+        longitude = kwargs['lon']
+        self.label.text = f"Latitude: {latitude}\nLongitude: {longitude}"
+
+
+Camera
+
+        disabled: True if first_number.text == '' or second_number.text == '' else False
