@@ -20,15 +20,11 @@ class Parcel():
     
     def read_config(self, config_path):
         # import the config file
-        import configparser
         config = configparser.ConfigParser()
         config.read(config_path)
         self.config = config
         
     def product_conc_prediction(self, time):
-            import json
-            from math import exp, log
-
             with open(self.config['directory']['dir']+self.config["ModelInputs"]["CropGroupProperties"], 'r') as crop_group_to_properties:
                 dict_crop_group_to_properties = json.load(crop_group_to_properties)
             with open(self.config['directory']['dir']+self.config["ModelInputs"]["SoilGroupProperties"], 'r') as soil_properties:
