@@ -1,0 +1,10 @@
+{
+    "cereals": {"root_depth":"0.3"} ,
+    "pasture": {"root_depth":"0.15"} ,
+    "tubers": {"root_depth":"0.3"} ,
+    "root crop": {"root_depth":"0.3"} ,
+    "feed crop": {"root_depth":"0.15"} ,
+    "leafy vegetable": {"root_depth":"0.3"} ,
+    "non-leafy vegetable": {"root_depth":"0.3"} ,
+    "fruit": {"root_depth":"0.3"}
+}
