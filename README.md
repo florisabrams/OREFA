@@ -13,10 +13,28 @@ pip install OREFA
 
 ## How to use
 
-Fill me in please! Don’t forget code examples:
+Part 1: Data ingestion
 
-``` python
-1+1
-```
+from orefa import AOI_creation parcel_df = AOI_creation(AOI_path,
+soil_path, parcel_path, deposition_path)
 
-    2
+Package to calculate the highest Activity (Bq/kg) for agricultural
+products.
+
+aoi_parcels = \[\]
+
+from orefa import test_data parcel_df = test_data()
+
+from orefa import Parcel
+
+for input_parcel in parcel_df.itertuples(): parcel =
+Parcel(id=input_parcel.id, crop=input_parcel.crop, soil =
+input_parcel.soil, deposition=input_parcel.deposition, geom =
+input_parcel.geom) parcel.product_conc_prediction(time = 1)
+aoi_parcels.append(parcel)
+
+parcel_df\[‘product_concentration’\] = \[parcel.product_concentration
+for parcel in aoi_parcels\]
+
+print(‘The highest concetration of Cs-137 found in agricultural products
+is’) print(f’{round(parcel_df.product_concentration.max(), 0)} Bq/kg’)

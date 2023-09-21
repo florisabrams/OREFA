@@ -1,0 +1,7 @@
+{
+  "cow":{"pasture": {"grass": "15", "soil": "0.049"},"cereals":"0", "feed crop":  15},
+  "poultry": {"pasture":{"grass": "0", "soil": "0.121"},"cereals": "0.1"},
+  "pig": {"pasture":{"grass": "0", "soil": "0.079"},"cereals": "3.4"},
+  "sheep":{ "pasture":{"grass": "1.4", "soil": "0.12"},"cereals":"0"},
+  "goat": {"pasture":{"grass": "1.4", "soil": "0.12"},"cereals":"0"}
+  }

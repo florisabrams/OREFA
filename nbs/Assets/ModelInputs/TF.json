@@ -1,0 +1,21 @@
+{
+  "pasture":{
+    "Sand":" 0.191", "Loam":" 0.041", "Clay":" 0.049", "Organic": "0.145","Other": "0.141"},
+  "cereals":{
+    "Sand": "0.047", "Loam": "0.013", "Clay": "0.016", "Organic": "0.059","Other": "0.026"},
+  "tubers":{
+    "Sand": "0.191", "Loam": "0.041", "Clay": "0.049", "Organic": "0.145","Other": "0.092"},
+  "fruit":{
+    "Sand": "0.047", "Loam": "0.044", "Clay": "0.047", "Organic": "0.141","Other": "0.047"},
+  "leafy vegetable":{
+    "Sand": "0.120", "Loam": "0.074", "Clay": "0.018", "Organic": "0.023","Other": "0.060"},
+  "non-leafy vegetable":{
+     "Sand": "0.064", "Loam": "0.278", "Clay": "0.197", "Organic": "0.959","Other": "0.197"},
+  "root crop":{
+     "Sand": "0.089", "Loam": "0.048", "Clay": "0.075", "Organic": "0.397","Other": "0.075"},
+  "feed crop":{
+     "Sand": "0.105", "Loam": "0.025", "Clay": "0.147", "Organic": "0.121","Other": "0.092"},
+  "none":{
+    "Sand": "0", "Loam": "0", "Clay": "0", "Organic": "0","Other": "0"}
+
+}

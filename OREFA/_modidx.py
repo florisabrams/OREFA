@@ -9,6 +9,5 @@ d = { 'settings': { 'branch': 'main',
                               'OREFA.Parcel.Parcel.__init__': ('parcel.html#parcel.__init__', 'OREFA/Parcel.py'),
                               'OREFA.Parcel.Parcel.__repr__': ('parcel.html#parcel.__repr__', 'OREFA/Parcel.py'),
                               'OREFA.Parcel.Parcel.product_conc_prediction': ( 'parcel.html#parcel.product_conc_prediction',
-                                                                               'OREFA/Parcel.py'),
-                              'OREFA.Parcel.Parcel.read_config': ('parcel.html#parcel.read_config', 'OREFA/Parcel.py')},
+                                                                               'OREFA/Parcel.py')},
             'OREFA.core': {'OREFA.core.foo': ('core.html#foo', 'OREFA/core.py')}}}
