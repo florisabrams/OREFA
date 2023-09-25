@@ -13,13 +13,22 @@ pip install OREFA
 
 ## How to use
 
-Part 1: Data ingestion
+# Part 1: Data ingestion
 
-from orefa import AOI_creation parcel_df = AOI_creation(AOI_path,
-soil_path, parcel_path, deposition_path)
+## Input Data
 
-Package to calculate the highest Activity (Bq/kg) for agricultural
-products.
+- Soil Data
+- Agricultural parcel (with crop type)
+- Deposition type
+
+from orefa import AOI_creation
+
+parcel_df = AOI_creation(AOI_path, soil_path, parcel_path,
+deposition_path)
+
+## Package to calculate the highest Activity (Bq/kg) for agricultural products.
+
+Using prédefined test data from the test_data() function
 
 aoi_parcels = \[\]
 

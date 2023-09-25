@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="conda install -c fastai nbdev">
+<meta name="description" content="conda install -c fastai nbdev, geopandas, matplotlib">
 
 <title>OREFA</title>
 <style>
@@ -98,10 +98,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="OREFA">
-<meta property="og:description" content="conda install -c fastai nbdev">
+<meta property="og:description" content="conda install -c fastai nbdev, geopandas, matplotlib">
 <meta property="og:site-name" content="OREFA">
 <meta name="twitter:title" content="OREFA">
-<meta name="twitter:description" content="conda install -c fastai nbdev">
+<meta name="twitter:description" content="conda install -c fastai nbdev, geopandas, matplotlib">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -168,6 +168,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
   <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#part-1-data-ingestion" id="toc-part-1-data-ingestion" class="nav-link" data-scroll-target="#part-1-data-ingestion">Part 1: Data ingestion</a>
+  <ul class="collapse">
+  <li><a href="#input-data" id="toc-input-data" class="nav-link" data-scroll-target="#input-data">Input Data</a></li>
+  <li><a href="#package-to-calculate-the-highest-activity-bqkg-for-agricultural-products." id="toc-package-to-calculate-the-highest-activity-bqkg-for-agricultural-products." class="nav-link" data-scroll-target="#package-to-calculate-the-highest-activity-bqkg-for-agricultural-products.">Package to calculate the highest Activity (Bq/kg) for agricultural products.</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/florisabrams/OREFA/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -181,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    conda install -c fastai nbdev
+    conda install -c fastai nbdev, geopandas, matplotlib
   </div>
 </div>
 
@@ -204,15 +209,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="how-to-use" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
+</section>
+<section id="part-1-data-ingestion" class="level1">
+<h1>Part 1: Data ingestion</h1>
+<section id="input-data" class="level2">
+<h2 class="anchored" data-anchor-id="input-data">Input Data</h2>
+<ul>
+<li>Soil Data</li>
+<li>Agricultural parcel (with crop type)</li>
+<li>Deposition type</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orefa <span class="im">import</span> AOI_creation</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>parcel_df <span class="op">=</span> AOI_creation(AOI_path, soil_path, parcel_path, deposition_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="package-to-calculate-the-highest-activity-bqkg-for-agricultural-products." class="level2">
+<h2 class="anchored" data-anchor-id="package-to-calculate-the-highest-activity-bqkg-for-agricultural-products.">Package to calculate the highest Activity (Bq/kg) for agricultural products.</h2>
+<p>Using prédefined test data from the test_data() function</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>aoi_parcels <span class="op">=</span> []</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orefa <span class="im">import</span> test_data</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>parcel_df <span class="op">=</span> test_data()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> orefa <span class="im">import</span> Parcel</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> input_parcel <span class="kw">in</span> parcel_df.itertuples():</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    parcel <span class="op">=</span> Parcel(<span class="bu">id</span><span class="op">=</span>input_parcel.<span class="bu">id</span>, crop<span class="op">=</span>input_parcel.crop, soil <span class="op">=</span> input_parcel.soil, deposition<span class="op">=</span>input_parcel.deposition, geom <span class="op">=</span> input_parcel.geom)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    parcel.product_conc_prediction(time <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    aoi_parcels.append(parcel)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>parcel_df[<span class="st">'product_concentration'</span>] <span class="op">=</span> [parcel.product_concentration <span class="cf">for</span> parcel <span class="kw">in</span> aoi_parcels]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The highest concetration of Cs-137 found in agricultural products is'</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span><span class="bu">round</span>(parcel_df.product_concentration.<span class="bu">max</span>(), <span class="dv">0</span>)<span class="sc">}</span><span class="ss"> Bq/kg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
